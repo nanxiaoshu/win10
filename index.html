@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Windows10</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: url("images/img0.jpg") no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+
+        }
+
+        .mask {
+            background: black;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: none;
+            z-index: -1;
+        }
+    </style>
+    <link href="css/css.css" rel="stylesheet">
+    <script src="js/js.js"></script>
+</head>
+<body>
+<div class="mask"></div>
+<div id="container">
+    <!--		底栏-->
+    <div class="bottom_bar">
+        <!--			开始菜单按钮-->
+        <div class="start_menu" id="start_menu" title="开始">
+            <img id="start_menu_img" src="images/start_menu.png" width="20" height="20"/>
+        </div>
+        <!--			底部搜索框-->
+        <div class="bottom_search">
+            <i></i>
+            <input type="text" style="" placeholder="在这里输入你要搜索的内容">
+        </div>
+        <!--			回到桌面-->
+        <div class="back_desktop" id="back_desktop">
+        </div>
+        <!--			底部消息通知-->
+        <div class="bottom_info" id="bottom_info" title="没有新通知">
+            <img src="images/bottom_info.png" width="40" height="40"/>
+        </div>
+        <!--			底部时间日期-->
+        <div class="bottom_date" id="bottom_date">
+            <p id="bottom_date_time">16:21</p>
+            <p id="bottom_date_date">2020/5/31</p>
+        </div>
+        <!--			输入法-->
+        <div class="bottom_input_method" id="bottom_input_method" title="">
+            <img style="margin-top:5px;margin-left:8px;display: none;" src="images/sougou_input.png" width="26"
+                 height="26">
+            <span style="display: none; color:black; padding-left:2px;padding-right:2px;font-size:15px;margin:0 auto;background: white;">拼</span>
+            <span>简体</span>
+        </div>
+        <!--			中文或英文-->
+        <div class="chinese_english" style="display:none;width:30px;font-size:18px;" id="chinese_english" title="中/英文">
+            中
+        </div>
+        <!--			音量-->
+        <div class="bottom_volume" id="bottom_volume" title="扬声器:静音">
+            <img id="bottom_volume_img" src="images/volume_control/1.png" width="35" height="35"/>
+        </div>
+        <!--			电量-->
+        <div class="bottom_electricity" id="bottom_electricity" title="电量充满(100%)">
+            <img src="images/bottom_electricity.png" width="30" height="30">
+        </div>
+        <!--			网络状态-->
+        <div class="bottom_network_status" id="bottom_network_status">
+            <img src="images/bottom_network_status.png" width="28" height="30">
+        </div>
+        <!--			显示隐藏图标-->
+        <div class="bottom_hidden_icon" title="显示隐藏图标">
+            <img src="images/bottom_hidden_icon.png" width="40" height="40">
+        </div>
+    </div>
+    <!--		消息通知展开栏-->
+    <div class="message_notification_expansion" id="message_notification_expansion">
+        <h4 style="display: block;width:100px;cursor:default;">没有新通知</h4>
+        <div class="message_notification_expansion_options" id="message_notification_expansion_options">
+            <p id="unfold_fold" style="display: block;width:100px;cursor:default;">折叠</p>
+            <div class="message_notification_expansion_options_container">
+                <ul id="message_notification_expansion_options_container_ul">
+                    <li>
+                        <img src="images/unfold_fold/1.png" width="30" height="30">
+                        <p>平板模式</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/2.png" width="35" height="35">
+                        <p>网络</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/3.png" width="25" height="25">
+                        <p>所有设置</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/4.png" width="30" height="30">
+                        <p>飞行模式</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/5.png" width="30" height="30">
+                        <p>定位</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/6.png" width="30" height="30">
+                        <p>专注助手</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/7.png" width="30" height="30">
+                        <p>蓝牙</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/8.png" width="30" height="30">
+                        <p>VPN</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/9.png" width="30" height="30">
+                        <p>节电模式</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/10.png" width="30" height="30">
+                        <p>投影</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/11.png" width="35" height="35">
+                        <p>连接</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/12.png" width="25" height="25">
+                        <p>1/8-1433223</p>
+                    </li>
+                    <li>
+                        <img src="images/unfold_fold/13.png" width="30" height="30">
+                        <p>夜间模式</p>
+                    </li>
+                </ul>
+                <div class="brightness_control" id="brightness_control">
+                    <img src="images/unfold_fold/14.png" width="50" height="50">
+                    <div class="brightness_control_bar" id="brightness_control_bar"></div>
+                    <div class="brightness_control_bar_article_mask" id="brightness_control_bar_article_mask"></div>
+                    <div class="brightness_control_bar_cursor" id="brightness_control_bar_cursor"></div>
+                    <div class="brightness_control_value" id="brightness_control_value">0</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--			音量控制-->
+    <div class="volume_control" id="volume_control">
+        <p style="color:white;font-size:18px;cursor:default;margin-top:15px;margin-left:15px;">扬声器(Realtek Higt
+            Defintion Audio)</p>
+        <img id="volume_control_img" src="images/volume_control/1.png" width="54" height="54">
+        <div class="volume_control_bar" id="volume_control_bar"></div>
+        <div class="volume_control_bar_article_mask" id="volume_control_bar_article_mask"></div>
+        <div class="volume_control_bar_cursor" id="volume_control_bar_cursor"></div>
+        <div class="volume_control_value" id="volume_control_value">0</div>
+    </div>
+    <!--			电量管理-->
+    <div class="power_management" id="power_management">
+        <div class="power_management_head">
+            <img style="margin-left:10px;display: block;float:left;" src="images/bottom_electricity.png" width="76"
+                 height="76">
+            <span style="margin-top:5px;margin-left:15px;color:white;font-size:45px;display:block;float:left;">100%</span>
+            <span style="margin-top:25px;margin-left:15px;color:gray;font-size:16px;display:block;float:left;">电池已充满</span>
+        </div>
+        <div class="power_management_body">
+            <p style="margin-left:25px;margin-top:16px;cursor:pointer;color:gray;font-size:16px;">电池设置</p>
+            <div class="power_management_icon">
+                <img src="images/unfold_fold/9.png" width="30" height="30">
+                <p>节电模式</p>
+            </div>
+        </div>
+    </div>
+    <!--			输入法展开栏-->
+    <div class="input_method_expansion" id="input_method_expansion">
+        <ul>
+            <li>
+                <img src="images/sougou_input.png" width="32" height="32">
+                <span>中文(简体,中国)<br>搜狗拼音输入法</span>
+            </li>
+            <li>
+                <span style="margin-top:20px;margin-left:20px;padding:0; color:black;line-height:28px;text-align:center;font-size:18px;background: white;height:28px;width:28px;display: block;">拼</span>
+                <span>中文(简体,中国)<br>微软拼音</span>
+            </li>
+            <li style="background: #444444;">
+                <span style="margin-top:20px;margin-left:10px;padding:0; color:white;text-align:center;font-size:18px;height:28px;width:50px;display: block;">简体</span>
+
+                <span style="margin-left:18px;">中文(简体,中国)<br>美式键盘&nbsp键盘</span>
+            </li>
+            <hr style="border:0;width:320px;height:1px;margin:3px auto;background: #444444;"/>
+            <li>
+                <img style="margin-top:10px;" src="images/language.png" width="44" height="44">
+                <span style="margin-left:15px;">语言首选项</span>
+            </li>
+        </ul>
+    </div>
+    <!--			网络展开栏-->
+    <div class="network_expansion" id="network_expansion">
+        <div class="network_expansion_items">
+            <ul>
+                <li style="padding-top:10px;overflow:visible;margin-top:10px;">
+                    <img src="images/bottom_network_status.png">
+                    <p style="color:white;font-size:18px;">南小树的网络</p>
+                    <p style="color:#A7ABB2;font-size:18px;">已连接</p>
+
+                </li>
+                <div style="background: #525050;width:370px;height:1px;margin:15px auto;"></div>
+                <li>
+                    <img src="images/network_status3.png" width="45" height="45">
+                    <p style="color:white;font-size:18px;">南柯的网络</p>
+                    <p style="color:#A7ABB2;font-size:18px;">安全</p>
+                    <div class="network_expansion_items_div">
+                        <span>√</span>
+                        <p>自动连接</p>
+                    </div>
+                    <div class="network_expansion_items_connect">连接</div>
+                    <div class="network_expansion_items_menu">
+                        <p style="margin-top:4px;">连接</p>
+                        <p>属性</p>
+                        <p style="margin-bottom:4px;">忘记</p>
+                    </div>
+
+                </li>
+
+                <li>
+                    <img src="images/network_status2.png" width="45" height="45">
+                    <p style="color:white;font-size:18px;">南灬柯的网络</p>
+                    <p style="color:#A7ABB2;font-size:18px;">开放</p>
+                    <p style="color:white;font-size:17px;margin-top:20px;margin-left:55px;">其他人可能会看到你通过此网络发送的信息</p>
+                    <div class="network_expansion_items_div">
+                        <span>√</span>
+                        <p>自动连接</p>
+                    </div>
+                    <div class="network_expansion_items_menu" style="height:38px; z-index:1;">
+                        <p style="margin-top:4px;">连接</p>
+                    </div>
+                    <div class="network_expansion_items_connect">连接</div>
+
+                </li>
+                <li>
+                    <img src="images/network_status3.png" width="45" height="45">
+                    <p style="color:white;font-size:18px;">南小小小小小小树的网络</p>
+                    <p style="color:#A7ABB2;font-size:18px;">安全</p>
+                    <div class="network_expansion_items_div">
+                        <span>√</span>
+                        <p>自动连接</p>
+                    </div>
+                    <div class="network_expansion_items_connect">连接</div>
+                    <div class="network_expansion_items_menu" style="height:38px;">
+                        <p style="margin-top:4px;">连接</p>
+
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="network_expansion_status">
+            <p style="color:#B2A6A5; font-size:18px;padding-left:15px;padding-bottom:5px;cursor:pointer;">
+                网络和Internet设置</p>
+            <p style="color:#A7ABB2; font-size:14px;padding-left:15px;padding-bottom:5px;cursor:default;">
+                更改设置，例如将某连接设置为按流量计费。</p>
+            <ul>
+                <li style="background: #4B4947;">
+                    <img src="images/network_status1.png" width="30" height="30">
+                    <p>WLAN</p>
+                </li>
+                <li>
+                    <img src="images/unfold_fold/4.png" width="32" height="32">
+                    <p>飞行模式</p>
+                </li>
+                <li style="background: #4B4947;">
+                    <img src="images/unfold_fold/12.png" width="30" height="30">
+                    <p>1/8-1433223</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--			日历展开-->
+    <div class="calendar_expansion" id="calendar_expansion">
+        <div class="calendar_expansion_header">
+            <p style="font-weight:100;font-size:48px;color:white;padding-top:25px;">11:17:56</p>
+            <p style="color:#A5A5A4;padding-left:35px;cursor:pointer;">2020年6月11日 闰四月二十</p>
+        </div>
+        <hr style="border:0;width:100%;height:1px;margin:1px auto;background: #444D5D;">
+        <div class="calendar_expansion_body">
+            <div class="calendar_expansion_body_header">
+                <p><span>2020年6月</span><span
+                        style="font-size:25px;margin-top:-3px;display:block;float:right;padding-right:30px;">∨</span><span
+                        style="margin-top:-3px;display:block;font-size:25px;float:right;padding-right:30px;">∧</span>
+                </p>
+                <ul>
+                    <li>一</li>
+                    <li>二</li>
+                    <li>三</li>
+                    <li>四</li>
+                    <li>五</li>
+                    <li>六</li>
+                    <li>日</li>
+                </ul>
+            </div>
+        </div>
+        <div class="calendar_expansion_hide" id="calendar_expansion_hide">
+            <hr style="border:0;width:100%;height:1px;margin:1px auto;background: #444D5D;">
+            <p style="font-size:20px;margin-top:10px;">今天<span style="">+</span></p>
+            <p style="margin-top:10px;">无事件</p>
+        </div>
+        <div class="calendar_expansion_footer" id="calendar_expansion_footer">
+            <p>隐藏日程∨</p>
+        </div>
+    </div>
+</div>
+</body>
+<!--	时间js-->
+<script>
+    var bottom_date = document.getElementById("bottom_date");
+    var bottom_date_time = document.getElementById("bottom_date_time");
+    var bottom_date_date = document.getElementById("bottom_date_date");
+    var calendar_expansion_header = document.getElementsByClassName("calendar_expansion_header")[0];
+    setInterval(function () {
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth() + 1;
+        var day = now.getDate();
+        var minutes = now.getMinutes();
+        var hours = now.getHours();
+        var week = now.getDay();
+        var second = now.getSeconds();
+        var arr = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        bottom_date_date.innerText = year + "/" + month + "/" + day;
+        bottom_date_time.innerText = hours + ":" + minutes;
+        bottom_date.title = year + "年" + month + "月" + day + "日\n" + arr[week];
+        if (second < 10) {
+            second = "0" + second;
+        }
+        calendar_expansion_header.children[0].innerText = hours + ":" + minutes + ":" + second;
+        calendar_expansion_header.children[1].innerText = year + "年" + month + "月" + day + "日";
+
+    }, 1000);
+</script>
+</html>
