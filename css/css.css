@@ -634,7 +634,7 @@
 }
 .calendar_item_ul li::after{
 	content:"";
-	width:48px;
+	width:49px;
 	height:46px;
 	position:absolute;
 	left:2px;
