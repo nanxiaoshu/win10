@@ -20,7 +20,9 @@ window.onload = function(){
     var bottom_input_method = document.getElementById("bottom_input_method");
     var volume_control_value = document.getElementById("volume_control_value");
     var bottom_network_status = document.getElementById("bottom_network_status");
+
     var input_method_expansion = document.getElementById("input_method_expansion");
+    var calendar_item_ul = document.getElementsByClassName('calendar_item_ul')[0];
     var brightness_control_bar =  document.getElementById("brightness_control_bar");
     var calendar_expansion_hide = document.getElementById("calendar_expansion_hide");
     var brightness_control_value = document.getElementById("brightness_control_value");
@@ -408,7 +410,7 @@ window.onload = function(){
         //日历展开栏
         var cal_width = parseInt(calendar_expansion.offsetWidth);
         var cal_height = parseInt(calendar_expansion.offsetHeight);
-        if((cursor_X < (win_width - cal_width) || cursor_Y < (win_height - cal_height - 40)) || (cursor_Y > (win_height - 40) && (cursor_X < bottom_date.offsetLeft) || cursor_X > bottom_date.offsetLeft + bottom_date.offsetWidth)){
+        if((cursor_X < (win_width - cal_width) || cursor_Y < (win_height - cal_height - 40)) || (cursor_Y > (win_height - 40) && (cursor_X < bottom_date.offsetLeft) || (cursor_X > bottom_date.offsetLeft + bottom_date.offsetWidth && cursor_Y > win_height - 40 ))){
             calendar_expansion.style.display = "none";
         }
     };
@@ -483,5 +485,12 @@ window.onload = function(){
         }
         e.stopPropagation();
     }
-
+    //日历中鼠标移动动画
+    calendar_item_ul.onmousemove = function(e){
+		var e = e || event;
+		var x = e.clientX - calendar_expansion.offsetLeft - 70;
+		var y = e.clientY - calendar_expansion.offsetTop - 265;
+        calendar_item_ul.style["background-position"] = x + "px " + y + "px";
+		e.preventDefault();
+	}
 }
