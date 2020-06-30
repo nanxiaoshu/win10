@@ -20,7 +20,6 @@ window.onload = function(){
     var bottom_input_method = document.getElementById("bottom_input_method");
     var volume_control_value = document.getElementById("volume_control_value");
     var bottom_network_status = document.getElementById("bottom_network_status");
-
     var input_method_expansion = document.getElementById("input_method_expansion");
     var calendar_item_ul = document.getElementsByClassName('calendar_item_ul')[0];
     var brightness_control_bar =  document.getElementById("brightness_control_bar");
