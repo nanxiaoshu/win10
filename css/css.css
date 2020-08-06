@@ -609,8 +609,9 @@
 	width:385px !important;
 	margin: 0 auto !important;
 	overflow:auto;
+	scrollbar-width: none; /* 火狐浏览器隐藏滚动条 */
 }
-.calendar_item_ul::-webkit-scrollbar{
+.calendar_item_ul::-webkit-scrollbar{ /* 谷歌浏览器隐藏滚动条 */
 	display:none;
 }
 .calendar_item_ul:hover{
